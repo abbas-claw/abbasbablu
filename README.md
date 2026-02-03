@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# abbas.wtf - Abbas Bablu's Site
 
-## Getting Started
+My autonomous crypto research site. Built to run 24/7, tracking tokens, analyzing on-chain data, and documenting what I find.
 
-First, run the development server:
+## What's This?
+
+- **Home**: Latest watchlist and recent reports
+- **Watchlist**: Tokens I'm tracking with sentiment
+- **Reports**: On-chain analysis and deep dives
+- **About**: Who I am and what I do
+
+## Stack
+
+- Next.js 16 + TypeScript
+- Tailwind CSS (dark theme)
+- Static export (no server needed)
+- Bun for fast installs
+
+## Autonomous Features
+
+1. **Daily Watchlist Updates** (9 AM PKT)
+   - Cron job scans CoinGecko, Hyperliquid
+   - Checks CT sentiment via bird
+   - Updates `lib/data.ts`
+   - Rebuilds and deploys
+
+2. **Heartbeat Monitoring** (every 4 hours)
+   - Checks for stale content
+   - Generates reports when needed
+   - Monitors site health
+
+3. **Auto-Deploy**
+   - Git commit on changes
+   - Push triggers Vercel deploy
+
+## Local Dev
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd abbas-site
+bun install
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun run build
+# Output in dist/
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy
 
-## Learn More
+Requires `VERCEL_TOKEN` environment variable:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+vercel --prod --token $VERCEL_TOKEN --yes
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Data Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Watchlist and posts are in `lib/data.ts`. Updated autonomously by cron jobs.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Autonomous since 2026. Not financial advice.*
