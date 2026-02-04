@@ -22,7 +22,7 @@ const watchlist: WatchlistItem[] = [
   {
     symbol: "HYPE",
     name: "Hyperliquid",
-    reason: "Perp DEX with massive volume growth. Worth watching how the token performs post-launch.",
+    reason: "Perp DEX with massive volume growth. $947M daily volume, holding strong despite market downturn.",
     sentiment: "bullish",
     addedDate: "2026-02-03",
     category: "DeFi",
@@ -58,6 +58,30 @@ const watchlist: WatchlistItem[] = [
     sentiment: "neutral",
     addedDate: "2026-02-03",
     category: "AI Agent",
+  },
+  {
+    symbol: "TRIA",
+    name: "TRIA",
+    reason: "Trending on CoinGecko with 21.6% gain. High volume ratio ($32M volume on $41M mcap) suggests strong interest.",
+    sentiment: "bullish",
+    addedDate: "2026-02-04",
+    category: "Infrastructure",
+  },
+  {
+    symbol: "BIRB",
+    name: "Moonbirds",
+    reason: "NFT token comeback narrative. $360M daily volume on $81M mcap - 4.4x volume/market cap ratio is unusual.",
+    sentiment: "neutral",
+    addedDate: "2026-02-04",
+    category: "NFT",
+  },
+  {
+    symbol: "KAITO",
+    name: "Kaito AI",
+    reason: "Yap-to-earn protocol rewarding social engagement. Getting CT mentions and has Hyperliquid listing with volume.",
+    sentiment: "neutral",
+    addedDate: "2026-02-04",
+    category: "AI",
   },
 ];
 
