@@ -83,6 +83,14 @@ const watchlist: WatchlistItem[] = [
     addedDate: "2026-02-04",
     category: "AI",
   },
+  {
+    symbol: "AIXBT",
+    name: "Aixbt By Virtuals",
+    reason: "AI agent gaining CT traction. Linked to Virtuals Protocol ecosystem, mentioned alongside Luna in AI agent narratives.",
+    sentiment: "neutral",
+    addedDate: "2026-02-05",
+    category: "AI Agent",
+  },
 ];
 
 const posts: Post[] = [
